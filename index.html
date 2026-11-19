@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTE | Single-Page Educational Resource Hub</title>
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top site-navbar">
+        <div class="container py-1">
+            <!-- Brand Logo -->
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#home">
+                <span class="brand-icon me-2 d-inline-flex align-items-center justify-content-center rounded-3 bg-primary text-white shadow-xs">
+                    <i class="bi bi-mortarboard-fill"></i>
+                </span>
+                <span>M<span class="text-primary">TE</span></span>
+            </a>
+            <!-- Mobile Toggler -->
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list fs-2 text-dark"></i>
+            </button>
+            <!-- Collapsible Links & Actions -->
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-1 gap-lg-2 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link nav-pill-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-pill-link" href="#introduction">Why Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-pill-link" href="#featured">Featured</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-pill-link" href="#categories-section">Subjects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-pill-link" href="#about">About</a>
+                    </li>
+                </ul>
+                <!-- Right Action Buttons -->
+                <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 pb-2 pb-lg-0">
+                    <a class="btn btn-light btn-sm px-3 py-2 rounded-pill fw-semibold text-dark border nav-kit-btn" href="#resources">
+                        <i class="bi bi-journal-arrow-down text-primary me-1"></i> Study Kits
+                    </a>
+                    <a class="btn btn-learning btn-sm px-3 py-2 rounded-pill fw-semibold shadow-xs" href="#featured">
+                        Start Learning <i class="bi bi-arrow-right-short align-middle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 1. Home Section -->
+    <section id="home" class="hero-section py-5">
+        <div class="container py-3 py-lg-4">
+            <!-- Hero Banner -->
+            <div class="hero-card p-4 p-lg-5 rounded-4 position-relative overflow-hidden shadow-lg mb-5">
+                <div class="row align-items-center g-4 g-lg-5">
+                    <!-- Left Hero Copy -->
+                    <div class="col-lg-7 text-center text-lg-start">
+                        <span class="badge bg-white text-primary px-3 py-2 rounded-pill shadow-sm mb-3 fw-semibold">
+                            <i class="bi bi-stars me-1 text-warning"></i> 500+ Interactive Lessons &amp; Study Guides
+                        </span>
+                        <h1 class="display-5 fw-bold text-white mb-3 lh-sm">
+                            Master New Skills at Your Own Pace
+                        </h1>
+                        <p class="lead text-white-50 mb-4">
+                            Structured learning paths, hands-on coding sandboxes, and downloadable cheat sheets designed to turn curious beginners into confident builders.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-4">
+                            <a href="#featured" class="btn btn-warning btn-get-started btn-lg px-4 fw-bold text-dark rounded-pill shadow">
+                                Get Started Free <i class="bi bi-arrow-right-short fs-4 align-middle"></i>
+                            </a>
+                            <a href="#categories-section" class="btn btn-outline-light btn-lg px-4 rounded-pill">
+                                <i class="bi bi-collection-play me-2"></i>Browse Categories
+                            </a>
+                        </div>
+                        <!-- Quick Trust Bar -->
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-4 text-white-50 small pt-3 border-top border-white border-opacity-10">
+                            <span><i class="bi bi-check2-circle text-warning me-1"></i> No credit card required</span>
+                            <span><i class="bi bi-award text-warning me-1"></i> Verified certificates</span>
+                            <span><i class="bi bi-cloud-download text-warning me-1"></i> Offline PDF workbooks</span>
+                        </div>
+                    </div>
+                    <!-- Right Hero Preview Card -->
+                    <div class="col-lg-5">
+                        <div class="hero-preview-card border border-white border-opacity-25 rounded-4 p-4 text-white shadow">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-warning text-dark fw-bold px-2 py-1">POPULAR TRACK</span>
+                                <span class="small text-white-50"><i class="bi bi-people-fill me-1 text-warning"></i> 18,420 enrolled</span>
+                            </div>
+
+                            <h2 class="h5 fw-bold mb-1">Full-Stack Web Foundations</h2>
+                            <p class="small text-white-50 mb-3">HTML5, Modern CSS, JavaScript ES6 &amp; APIs</p>
+                            <!-- Mini Syllabus Progress -->
+                            <div class="bg-dark bg-opacity-50 border border-white border-opacity-10 rounded-3 p-3 mb-3">
+                                <div class="d-flex justify-content-between small mb-1">
+                                    <span class="fw-medium">Module 1: Semantic Structure</span>
+                                    <span class="text-warning fw-semibold">Completed</span>
+                                </div>
+                                <div class="progress hero-progress mb-3">
+                                    <div class="progress-bar bg-warning progress-complete" role="progressbar" aria-label="Module 1 progress" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+
+                                <div class="d-flex justify-content-between small mb-1">
+                                    <span class="fw-medium">Module 2: Responsive Layouts</span>
+                                    <span class="text-info fw-semibold">65%</span>
+                                </div>
+                                <div class="progress hero-progress">
+                                    <div class="progress-bar bg-info progress-active" role="progressbar" aria-label="Module 2 progress" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between small pt-1">
+                                <span class="text-white-75"><i class="bi bi-play-circle-fill text-warning me-1"></i> 24 Interactive Labs</span>
+                                <a href="#featured" class="link-light fw-semibold text-decoration-none">
+                                    Preview Syllabus <i class="bi bi-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Introduction Section -->
+            <div id="introduction" class="bg-white p-4 p-lg-5 rounded-4 border shadow-xs mb-5">
+                <div class="row align-items-center g-4 g-lg-5 mb-4">
+                    <div class="col-lg-7">
+                        <span class="section-eyebrow text-primary fw-bold text-uppercase small">Introduction &amp; Methodology</span>
+                        <h2 class="h2 fw-bold mt-1 mb-3">Designed for Deep Understanding, Not Passive Watching</h2>
+                        <p class="text-secondary mb-3">
+                            Traditional video tutorials leave you stuck when real-world problems arise. Our curriculum pairs concise, 10-minute lessons with interactive checkpoints, downloadable cheat sheets, and mentor-verified study tracks.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 small text-muted">
+                            <span><i class="bi bi-check2-circle text-success me-1"></i> Self-paced sprints</span>
+                            <span><i class="bi bi-check2-circle text-success me-1"></i> Instant code feedback</span>
+                            <span><i class="bi bi-check2-circle text-success me-1"></i> Offline study notes</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="row g-3 text-center">
+                            <div class="col-4">
+                                <div class="stat-pill p-3 rounded-4 h-100 d-flex flex-column justify-content-center">
+                                    <div class="h4 fw-bold text-primary mb-1">120K+</div>
+                                    <div class="small text-muted">Active Learners</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-pill p-3 rounded-4 h-100 d-flex flex-column justify-content-center">
+                                    <div class="h4 fw-bold text-success mb-1">4.9 <i class="bi bi-star-fill text-warning fs-6"></i></div>
+                                    <div class="small text-muted">Course Rating</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-pill p-3 rounded-4 h-100 d-flex flex-column justify-content-center">
+                                    <div class="h4 fw-bold text-indigo mb-1">94%</div>
+                                    <div class="small text-muted">Completion Rate</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Loop / Workflow Strip -->
+                <div class="method-loop-bar rounded-4 p-3 px-lg-4 mb-4 border">
+                    <div class="row align-items-center g-2 text-center text-md-start small">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                            <span class="badge rounded-pill bg-primary text-white">Step 01</span>
+                            <span class="fw-semibold text-dark">Watch 10-Min Concept</span>
+                        </div>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                            <span class="badge rounded-pill bg-info-subtle text-info-emphasis">Step 02</span>
+                            <span class="fw-semibold text-dark">Solve Guided Lab</span>
+                        </div>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                            <span class="badge rounded-pill bg-success-subtle text-success-emphasis">Step 03</span>
+                            <span class="fw-semibold text-dark">Review Cheat Sheet</span>
+                        </div>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                            <span class="badge rounded-pill bg-warning-subtle text-warning-emphasis">Step 04</span>
+                            <span class="fw-semibold text-dark">Ship Capstone</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3-Column Learning Pillars -->
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="pillar-card p-4 rounded-4 bg-light border h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="icon-circle bg-primary-subtle text-primary">
+                                        <i class="bi bi-code-square fs-5"></i>
+                                    </div>
+                                    <span class="badge bg-white text-primary border rounded-pill">Hands-On</span>
+                                </div>
+                                <h3 class="h5 fw-bold mb-2">1. Learn by Building</h3>
+                                <p class="small text-muted mb-3">
+                                    Every concept is immediately followed by an in-browser exercise or mini-project so knowledge sticks without setup headaches.
+                                </p>
+                            </div>
+                            <div class="small fw-semibold text-primary pt-2 border-top">
+                                <i class="bi bi-terminal-plus me-1"></i> Interactive sandboxes included
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="pillar-card p-4 rounded-4 bg-light border h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="icon-circle bg-success-subtle text-success">
+                                        <i class="bi bi-file-earmark-pdf fs-5"></i>
+                                    </div>
+                                    <span class="badge bg-white text-success border rounded-pill">Offline Ready</span>
+                                </div>
+                                <h3 class="h5 fw-bold mb-2">2. Printable Study Kits</h3>
+                                <p class="small text-muted mb-3">
+                                    Download structured summary sheets, syntax references, and spaced-repetition flashcards for offline revision anytime.
+                                </p>
+                            </div>
+                            <div class="small fw-semibold text-success pt-2 border-top">
+                                <i class="bi bi-journal-check me-1"></i> PDF guides &amp; flashcard decks
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="pillar-card p-4 rounded-4 bg-light border h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="icon-circle bg-warning-subtle text-warning">
+                                        <i class="bi bi-patch-check fs-5"></i>
+                                    </div>
+                                    <span class="badge bg-white text-warning-emphasis border rounded-pill">Verified</span>
+                                </div>
+                                <h3 class="h5 fw-bold mb-2">3. Portfolio-Ready Proof</h3>
+                                <p class="small text-muted mb-3">
+                                    Graduate each track with verified capstone projects and shareable certificates built to showcase practical competency.
+                                </p>
+                            </div>
+                            <div class="small fw-semibold text-dark pt-2 border-top">
+                                <i class="bi bi-award me-1 text-warning"></i> Shareable completion credentials
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Featured Section -->
+            <div id="featured" class="pt-2">
+                <!-- Section Header & Filter Pills -->
+                <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+                    <div>
+                        <span class="section-eyebrow text-primary fw-bold text-uppercase small">Curated Paths</span>
+                        <h2 class="h3 fw-bold mb-1">Featured Courses</h2>
+                        <p class="text-muted small mb-0">Hands-on tracks designed to take you from fundamentals to working projects.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2" role="group" aria-label="Course track filters">
+                        <button type="button" class="btn btn-primary btn-sm rounded-pill px-3 fw-semibold">All Tracks</button>
+                        <button type="button" class="btn btn-white btn-sm rounded-pill px-3 border text-secondary course-filter-btn">Beginner Friendly</button>
+                        <button type="button" class="btn btn-white btn-sm rounded-pill px-3 border text-secondary course-filter-btn">Career Ready</button>
+                    </div>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+                    <!-- Left Track Advisor Column -->
+                    <div class="col-lg-4">
+                        <div class="bg-white p-4 rounded-4 border shadow-sm h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="icon-circle bg-primary-subtle text-primary">
+                                        <i class="bi bi-compass fs-4"></i>
+                                    </div>
+                                    <span class="badge bg-success-subtle text-success rounded-pill px-3 py-2">
+                                        <i class="bi bi-lightning-charge-fill me-1"></i> Updated Weekly
+                                    </span>
+                                </div>
+
+                                <h3 class="h5 fw-bold mb-2">Guided Learning Tracks</h3>
+                                <p class="small text-muted mb-4">
+                                    Not sure where to begin? Start with our highest-rated foundational tracks built by industry educators to turn theory into portfolio-ready work.
+                                </p>
+                                <!-- Mini Path Steps Box -->
+                                <div class="bg-light rounded-3 p-3 border mb-4">
+                                    <div class="small fw-bold text-dark mb-2">Every Track Includes:</div>
+                                    <ul class="list-unstyled small text-secondary mb-0 d-flex flex-column gap-2">
+                                        <li class="d-flex align-items-center">
+                                            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                            <span>Step-by-step interactive coding labs</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                            <span>Downloadable PDF cheat sheets</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                            <span>Capstone project &amp; shareable certificate</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-top">
+                                <div class="d-flex justify-content-between align-items-center small text-muted mb-3">
+                                    <span><i class="bi bi-people-fill text-primary me-1"></i> 42,800+ enrolled this month</span>
+                                    <span class="fw-semibold text-dark">100% Free</span>
+                                </div>
+                                <a href="#categories-section" class="btn btn-dark btn-sm w-100 rounded-pill py-2 fw-semibold">
+                                    Explore Full Catalog <i class="bi bi-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Featured Course Cards (2x2 Grid) -->
+                    <div class="col-lg-8">
+                        <div class="row row-cols-1 row-cols-md-2 g-4 h-100">
+                            <!-- Card 1 -->
+                            <div class="col">
+                                <div class="card h-100 course-card border rounded-4 overflow-hidden bg-white">
+                                    <div class="course-cover position-relative">
+                                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80" class="card-img-top course-cover-img" alt="Web Foundations HTML and CSS">
+                                        <div class="course-cover-overlay"></div>
+                                        <span class="badge bg-white text-dark position-absolute top-0 start-0 m-3 shadow-sm">Beginner</span>
+                                        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 end-0 m-3">
+                                            <i class="bi bi-star-fill text-warning me-1"></i>4.9 (1.2k)
+                                        </span>
+                                    </div>
+                                    <div class="card-body d-flex flex-column p-4">
+                                        <div class="d-flex justify-content-between align-items-center small text-muted mb-2">
+                                            <span><i class="bi bi-clock me-1 text-primary"></i>6 Hours &bull; 18 Lessons</span>
+                                            <span class="badge bg-primary-subtle text-primary rounded-pill">HTML &amp; CSS</span>
+                                        </div>
+                                        <h4 class="h5 fw-bold mb-2">Web Foundations</h4>
+                                        <p class="card-text small text-muted flex-grow-1 mb-3">
+                                            Master semantic HTML5, responsive CSS grids, Flexbox layouts, and clean accessible interfaces.
+                                        </p>
+                                        <div class="d-flex align-items-center justify-content-between small text-muted border-top pt-3 mb-3">
+                                            <span><i class="bi bi-folder2-open me-1"></i>3 Guided Projects</span>
+                                            <span class="text-success fw-bold">Free Access</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-primary btn-sm w-100 rounded-pill py-2 fw-semibold">
+                                            Start Course <i class="bi bi-arrow-right-short fs-5 align-middle"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="col">
+                                <div class="card h-100 course-card border rounded-4 overflow-hidden bg-white">
+                                    <div class="course-cover position-relative">
+                                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" class="card-img-top course-cover-img" alt="Data Literacy Analytics">
+                                        <div class="course-cover-overlay"></div>
+                                        <span class="badge bg-white text-dark position-absolute top-0 start-0 m-3 shadow-sm">Intermediate</span>
+                                        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 end-0 m-3">
+                                            <i class="bi bi-star-fill text-warning me-1"></i>4.8 (940)
+                                        </span>
+                                    </div>
+                                    <div class="card-body d-flex flex-column p-4">
+                                        <div class="d-flex justify-content-between align-items-center small text-muted mb-2">
+                                            <span><i class="bi bi-clock me-1 text-teal"></i>8 Hours &bull; 24 Lessons</span>
+                                            <span class="badge bg-success-subtle text-success rounded-pill">Analytics</span>
+                                        </div>
+                                        <h4 class="h5 fw-bold mb-2">Data Literacy</h4>
+                                        <p class="card-text small text-muted flex-grow-1 mb-3">
+                                            Clean messy spreadsheets, build interactive visual dashboards, and uncover actionable trends.
+                                        </p>
+                                        <div class="d-flex align-items-center justify-content-between small text-muted border-top pt-3 mb-3">
+                                            <span><i class="bi bi-table me-1"></i>4 Real Datasets</span>
+                                            <span class="text-success fw-bold">Free Access</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-primary btn-sm w-100 rounded-pill py-2 fw-semibold">
+                                            Start Course <i class="bi bi-arrow-right-short fs-5 align-middle"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="col">
+                                <div class="card h-100 course-card border rounded-4 overflow-hidden bg-white">
+                                    <div class="course-cover position-relative">
+                                        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80" class="card-img-top course-cover-img" alt="UI UX Wireframing and Design">
+                                        <div class="course-cover-overlay"></div>
+                                        <span class="badge bg-white text-dark position-absolute top-0 start-0 m-3 shadow-sm">All Levels</span>
+                                        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 end-0 m-3">
+                                            <i class="bi bi-star-fill text-warning me-1"></i>4.9 (1.5k)
+                                        </span>
+                                    </div>
+                                    <div class="card-body d-flex flex-column p-4">
+                                        <div class="d-flex justify-content-between align-items-center small text-muted mb-2">
+                                            <span><i class="bi bi-clock me-1 text-warning"></i>5 Hours &bull; 14 Lessons</span>
+                                            <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">Figma &amp; UI</span>
+                                        </div>
+                                        <h4 class="h5 fw-bold mb-2">UI/UX Essentials</h4>
+                                        <p class="card-text small text-muted flex-grow-1 mb-3">
+                                            Learn visual hierarchy, typography pairing, color contrast, and user-centered wireframing.
+                                        </p>
+                                        <div class="d-flex align-items-center justify-content-between small text-muted border-top pt-3 mb-3">
+                                            <span><i class="bi bi-vector-pen me-1"></i>Starter Figma Kit</span>
+                                            <span class="text-success fw-bold">Free Access</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-primary btn-sm w-100 rounded-pill py-2 fw-semibold">
+                                            Start Course <i class="bi bi-arrow-right-short fs-5 align-middle"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="col">
+                                <div class="card h-100 course-card border rounded-4 overflow-hidden bg-white">
+                                    <div class="course-cover position-relative">
+                                        <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=800&q=80" class="card-img-top course-cover-img" alt="Python Programming Basics">
+                                        <div class="course-cover-overlay"></div>
+                                        <span class="badge bg-white text-dark position-absolute top-0 start-0 m-3 shadow-sm">Beginner</span>
+                                        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 end-0 m-3">
+                                            <i class="bi bi-star-fill text-warning me-1"></i>5.0 (2.1k)
+                                        </span>
+                                    </div>
+                                    <div class="card-body d-flex flex-column p-4">
+                                        <div class="d-flex justify-content-between align-items-center small text-muted mb-2">
+                                            <span><i class="bi bi-clock me-1 text-danger"></i>10 Hours &bull; 30 Lessons</span>
+                                            <span class="badge bg-danger-subtle text-danger rounded-pill">Python 3</span>
+                                        </div>
+                                        <h4 class="h5 fw-bold mb-2">Python Basics</h4>
+                                        <p class="card-text small text-muted flex-grow-1 mb-3">
+                                            Write clean scripts, automate repetitive file tasks, and solve algorithmic logic puzzles.
+                                        </p>
+                                        <div class="d-flex align-items-center justify-content-between small text-muted border-top pt-3 mb-3">
+                                            <span><i class="bi bi-terminal me-1"></i>15 Code Challenges</span>
+                                            <span class="text-success fw-bold">Free Access</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-primary btn-sm w-100 rounded-pill py-2 fw-semibold">
+                                            Start Course <i class="bi bi-arrow-right-short fs-5 align-middle"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 2. Categories Section -->
+    <section id="categories-section" class="py-5 bg-white border-top border-bottom">
+        <div class="container py-4">
+            <!-- Category Listings -->
+            <div id="categories" class="mb-5">
+                <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+                    <div>
+                        <span class="section-eyebrow text-primary fw-bold text-uppercase small">Explore Library</span>
+                        <h2 class="h3 fw-bold mb-1">Browse by Subject</h2>
+                        <p class="text-muted small mb-0">Pick a discipline to view syllabi, flashcards, and guided practice labs.</p>
+                    </div>
+                    <span class="small text-muted">6 Core Disciplines &bull; 85+ Modules</span>
+                </div>
+                <!-- 2 Rows of 3 Cards on Desktop -->
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+                    <!-- Subject 1: Design -->
+                    <div class="col">
+                        <div class="card h-100 subject-card rounded-4 overflow-hidden">
+                            <div class="subject-img-wrapper position-relative">
+                                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80" class="card-img-top subject-img" alt="UI/UX Design Workspace">
+                                <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm">14 Courses</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="subject-badge bg-primary-subtle text-primary rounded-3">
+                                        <i class="bi bi-palette2"></i>
+                                    </span>
+                                    <h3 class="h5 fw-bold mb-0">Design</h3>
+                                </div>
+                                <p class="small text-muted mb-3 flex-grow-1">Master UI kits, Figma component systems, color theory, and modern typography.</p>
+                                <a href="#" class="btn btn-outline-primary btn-sm w-100 rounded-pill fw-semibold">Explore Design</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Subject 2: Programming -->
+                    <div class="col">
+                        <div class="card h-100 subject-card rounded-4 overflow-hidden">
+                            <div class="subject-img-wrapper position-relative">
+                                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" class="card-img-top subject-img" alt="Programming Code on Screen">
+                                <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm">22 Courses</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="subject-badge bg-info-subtle text-info rounded-3">
+                                        <i class="bi bi-code-slash"></i>
+                                    </span>
+                                    <h3 class="h5 fw-bold mb-0">Programming</h3>
+                                </div>
+                                <p class="small text-muted mb-3 flex-grow-1">Build full-stack web apps with JavaScript, Python, Git workflows, and REST APIs.</p>
+                                <a href="#" class="btn btn-outline-primary btn-sm w-100 rounded-pill fw-semibold">Explore Programming</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Subject 3: Data Science -->
+                    <div class="col">
+                        <div class="card h-100 subject-card rounded-4 overflow-hidden">
+                            <div class="subject-img-wrapper position-relative">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" class="card-img-top subject-img" alt="Data Science Analytics Dashboard">
+                                <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm">16 Courses</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="subject-badge bg-success-subtle text-success rounded-3">
+                                        <i class="bi bi-graph-up-arrow"></i>
+                                    </span>
+                                    <h3 class="h5 fw-bold mb-0">Data Science</h3>
+                                </div>
+                                <p class="small text-muted mb-3 flex-grow-1">Query databases with SQL, run statistical models, and craft clear visual charts.</p>
+                                <a href="#" class="btn btn-outline-primary btn-sm w-100 rounded-pill fw-semibold">Explore Data Science</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Subject 4: Cybersecurity -->
+                    <div class="col">
+                        <div class="card h-100 subject-card rounded-4 overflow-hidden">
+                            <div class="subject-img-wrapper position-relative">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" class="card-img-top subject-img" alt="Cybersecurity Digital Lock">
+                                <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm">11 Courses</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="subject-badge bg-warning-subtle text-warning rounded-3">
+                                        <i class="bi bi-shield-lock"></i>
+                                    </span>
+                                    <h3 class="h5 fw-bold mb-0">Cybersecurity</h3>
+                                </div>
+                                <p class="small text-muted mb-3 flex-grow-1">Learn network defense, encryption protocols, authentication, and threat analysis.</p>
+                                <a href="#" class="btn btn-outline-primary btn-sm w-100 rounded-pill fw-semibold">Explore Cybersecurity</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Subject 5: Languages -->
+                    <div class="col">
+                        <div class="card h-100 subject-card rounded-4 overflow-hidden">
+                            <div class="subject-img-wrapper position-relative">
+                                <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80" class="card-img-top subject-img" alt="Language Study Notebooks">
+                                <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm">12 Courses</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="subject-badge bg-danger-subtle text-danger rounded-3">
+                                        <i class="bi bi-translate"></i>
+                                    </span>
+                                    <h3 class="h5 fw-bold mb-0">Languages</h3>
+                                </div>
+                                <p class="small text-muted mb-3 flex-grow-1">Practice everyday conversation, grammar patterns, and spaced vocabulary drills.</p>
+                                <a href="#" class="btn btn-outline-primary btn-sm w-100 rounded-pill fw-semibold">Explore Languages</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Subject 6: AI & Logic -->
+                    <div class="col">
+                        <div class="card h-100 subject-card rounded-4 overflow-hidden">
+                            <div class="subject-img-wrapper position-relative">
+                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" class="card-img-top subject-img" alt="Artificial Intelligence Neural Visualization">
+                                <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm">10 Courses</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="subject-badge bg-secondary-subtle text-secondary rounded-3">
+                                        <i class="bi bi-cpu"></i>
+                                    </span>
+                                    <h3 class="h5 fw-bold mb-0">AI &amp; Logic</h3>
+                                </div>
+                                <p class="small text-muted mb-3 flex-grow-1">Explore structured prompting, neural network basics, and algorithmic problem solving.</p>
+                                <a href="#" class="btn btn-outline-primary btn-sm w-100 rounded-pill fw-semibold">Explore AI &amp; Logic</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sample Resources -->
+            <div id="resources" class="pt-2">
+                <div class="mb-3">
+                    <span class="section-eyebrow text-primary fw-bold text-uppercase small">Free Downloads &amp; Community</span>
+                    <h2 class="h3 fw-bold mb-1">Sample Study Resources</h2>
+                    <p class="text-muted small mb-0">Grab offline study kits or connect with local peer learning groups.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Resource Card 1: Local Study Hubs -->
+                    <div class="col-md-6">
+                        <div class="card resource-card rounded-4 overflow-hidden h-100 bg-light border">
+                            <div class="resource-cover position-relative">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" class="card-img-top resource-cover-img" alt="Students collaborating at a local study hub">
+                                <span class="badge bg-white text-dark position-absolute top-0 start-0 m-3 shadow-sm">
+                                    <i class="bi bi-geo-alt-fill text-primary me-1"></i>In-Person
+                                </span>
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="h6 fw-bold mb-2">Local Study Hubs</h3>
+                                    <p class="small text-muted mb-3">
+                                        Join weekend coding sprints, peer study groups, and library workshops hosted in 40+ cities.
+                                    </p>
+                                </div>
+                                <div class="pt-3 border-top d-flex align-items-center justify-content-between">
+                                    <span class="small text-muted">Free RSVP</span>
+                                    <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-semibold">
+                                        Find a Meetup <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Resource Card 2: Starter Cheat Sheets -->
+                    <div class="col-md-6">
+                        <div class="card resource-card rounded-4 overflow-hidden h-100 bg-light border">
+                            <div class="resource-cover position-relative">
+                                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" class="card-img-top resource-cover-img" alt="Printed study cheat sheets and notebooks">
+                                <span class="badge bg-primary text-white position-absolute top-0 start-0 m-3 shadow-sm">
+                                    <i class="bi bi-file-earmark-pdf-fill me-1"></i>PDF + Anki
+                                </span>
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="h6 fw-bold mb-2">2026 Starter Cheat Sheets</h3>
+                                    <p class="small text-muted mb-3">
+                                        Printable quick-reference syntax sheets, keyboard shortcut maps, and spaced-repetition flashcard decks.
+                                    </p>
+                                </div>
+                                <div class="pt-3 border-top d-flex align-items-center justify-content-between">
+                                    <span class="small text-muted">24 MB ZIP</span>
+                                    <a href="#" class="btn btn-primary btn-sm rounded-pill px-3 fw-semibold">
+                                        Download <i class="bi bi-download ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 3. About Section -->
+    <section id="about" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="mb-4">
+                <span class="section-eyebrow text-primary fw-bold text-uppercase small">Our Academy</span>
+                <h2 class="h3 fw-bold mb-1">About MTE</h2>
+                <p class="text-muted small mb-0">Built by educators and engineers to keep self-paced learning clear and accessible.</p>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <!-- Mission Statement  -->
+                <div id="mission" class="col-lg-7">
+                    <div class="bg-light p-4 rounded-4 border h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <!-- Mission Callout Banner -->
+                            <div class="mission-banner rounded-3 p-4 mb-4 text-white">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <i class="bi bi-lightbulb-fill text-warning fs-5"></i>
+                                    <h3 class="h6 fw-bold text-uppercase mb-0">Our Mission Statement</h3>
+                                </div>
+                                <p class="small text-white-50 mb-0">
+                                    Quality education should be structured, approachable, and free of gatekeeping. We empower lifelong learners with clear mental models, practical projects, and community support.
+                                </p>
+                            </div>
+                            <!-- 3 Core Principles Mini Grid -->
+                            <div class="row g-3 text-center">
+                                <div class="col-4">
+                                    <div class="bg-white rounded-3 p-3 border h-100">
+                                        <div class="fw-bold text-primary small mb-1">Open Access</div>
+                                        <div class="text-muted smaller">Zero paywalls on core tracks</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="bg-white rounded-3 p-3 border h-100">
+                                        <div class="fw-bold text-success small mb-1">Project-First</div>
+                                        <div class="text-muted smaller">Real builds over passive video</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="bg-white rounded-3 p-3 border h-100">
+                                        <div class="fw-bold text-indigo small mb-1">Peer Driven</div>
+                                        <div class="text-muted smaller">Active mentor &amp; hub support</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Information -->
+                <div id="contact" class="col-lg-5">
+                    <div class="bg-light p-4 rounded-4 border h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="h5 fw-bold mb-2">Contact Information</h3>
+                            <p class="small text-muted mb-3">
+                                Have questions about a course track, study kit, or local hub? Reach out or subscribe to our weekly digest.
+                            </p>
+                            <!-- Newsletter Digest Form -->
+                            <form class="bg-white p-3 rounded-3 border mb-3">
+                                <label for="digestEmail" class="form-label small fw-bold text-dark mb-1">
+                                    <i class="bi bi-envelope-paper-heart text-primary me-1"></i> Weekly Study Notes &amp; Course Alerts
+                                </label>
+                                <div class="input-group input-group-sm">
+                                    <input id="digestEmail" type="email" class="form-control" placeholder="you@example.com" aria-label="Email address">
+                                    <button class="btn btn-primary px-3 fw-semibold" type="button">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Direct Contact Details -->
+                        <div class="bg-white p-3 rounded-3 border d-flex flex-column gap-2 small">
+                            <a href="mailto:hello@mte.edu" class="text-decoration-none text-dark fw-medium">
+                                <i class="bi bi-envelope-fill me-2 text-primary"></i> hello@mte.edu
+                            </a>
+                            <a href="tel:1234567890" class="text-decoration-none text-dark fw-medium">
+                                <i class="bi bi-telephone-fill me-2 text-primary"></i> (123) 456-7890
+                            </a>
+                            <span class="text-muted">
+                                <i class="bi bi-clock-fill me-2 text-primary"></i> Mon–Fri, 9am–6pm
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="site-footer text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 pb-4 border-bottom border-white border-opacity-10">
+                <!-- Brand & Tagline Column -->
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand fw-bold d-inline-flex align-items-center text-white mb-3" href="#home">
+                        <span class="brand-icon me-2 d-inline-flex align-items-center justify-content-center rounded-3 bg-primary text-white">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </span>
+                        <span>M<span class="text-warning">TE</span></span>
+                    </a>
+                    <p class="small text-white-50 mb-3">
+                        Structured learning paths, interactive coding sandboxes, and printable study kits built to empower lifelong learners everywhere.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="footer-social-btn rounded-circle d-inline-flex align-items-center justify-content-center" aria-label="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="#" class="footer-social-btn rounded-circle d-inline-flex align-items-center justify-content-center" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="#" class="footer-social-btn rounded-circle d-inline-flex align-items-center justify-content-center" aria-label="Discord">
+                            <i class="bi bi-discord"></i>
+                        </a>
+                        <a href="#" class="footer-social-btn rounded-circle d-inline-flex align-items-center justify-content-center" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Learning Tracks Column -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h3 class="h6 fw-bold text-uppercase small text-white mb-3">Tracks</h3>
+                    <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+                        <li><a href="#featured" class="footer-link text-decoration-none">Web Foundations</a></li>
+                        <li><a href="#featured" class="footer-link text-decoration-none">Data Literacy</a></li>
+                        <li><a href="#featured" class="footer-link text-decoration-none">UI/UX Essentials</a></li>
+                        <li><a href="#featured" class="footer-link text-decoration-none">Python Basics</a></li>
+                    </ul>
+                </div>
+                <!-- Subjects Column -->
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h3 class="h6 fw-bold text-uppercase small text-white mb-3">Categories</h3>
+                    <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+                        <li><a href="#categories" class="footer-link text-decoration-none">Design &amp; Typography</a></li>
+                        <li><a href="#categories" class="footer-link text-decoration-none">Programming &amp; APIs</a></li>
+                        <li><a href="#categories" class="footer-link text-decoration-none">Data Science &amp; SQL</a></li>
+                        <li><a href="#categories" class="footer-link text-decoration-none">Cybersecurity &amp; AI</a></li>
+                    </ul>
+                </div>
+                <!-- Resources & Academy Column -->
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="h6 fw-bold text-uppercase small text-white mb-3">Resources</h3>
+                    <ul class="list-unstyled small d-flex flex-column gap-2 mb-3">
+                        <li><a href="#resources" class="footer-link text-decoration-none">2026 Starter Cheat Sheets</a></li>
+                        <li><a href="#resources" class="footer-link text-decoration-none">Local Study Hubs</a></li>
+                        <li><a href="#mission" class="footer-link text-decoration-none">Our Mission</a></li>
+                        <li><a href="#contact" class="footer-link text-decoration-none">Contact Us</a></li>
+                    </ul>
+                    <a href="#home" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                        <i class="bi bi-arrow-up-short me-1"></i> Back to Top
+                    </a>
+                </div>
+            </div>
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-4 d-flex flex-wrap justify-content-between align-items-center gap-2 small text-white-50">
+                <span>&copy; 2026 MTE Academy. Built for curious minds everywhere.</span>
+                <div class="d-flex gap-3">
+                    <a href="#home" class="footer-link text-decoration-none">Privacy Policy</a>
+                    <a href="#home" class="footer-link text-decoration-none">Terms of Use</a>
+                    <a href="#categories" class="footer-link text-decoration-none">Syllabus Index</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
